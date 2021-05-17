@@ -1,0 +1,202 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Roboto;
+}
+
+/* header */
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: var(--spacing);
+  color: var(--white-color);
+  background-color: var(--black-color);
+  font-size: var(--font-large);
+}
+header .logo i {
+  color: var(--red-color);
+}
+
+/* player */
+.player {
+  position: sticky;
+  top: 0;
+  text-align: center;
+  background-color: var(--black-color);
+}
+.player video {
+  width: 100%;
+  height: 100%;
+  max-width: 1000px;
+}
+
+/* video info & Up next */
+.infoAndUpNext {
+  display: flex;
+  flex-direction: column;
+}
+/* info -metadata */
+.infoAndUpNext .info {
+  padding: var(--spacing);
+}
+
+.infoAndUpNext .info .hastags {
+  display: flex;
+}
+.infoAndUpNext .info .hastags li {
+  margin-right: var(--spacing);
+  font-size: var(--font-small);
+  color: var(--blue-color);
+}
+.infoAndUpNext .info .titleAndButton {
+  display: flex;
+}
+.infoAndUpNext .info .metadata .titleAndButton .title {
+  font-size: var(--font-medium);
+  margin-right: var(--spacing);
+}
+.infoAndUpNext .info .metadata .titleAndButton .title.clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.infoAndUpNext .info .metadata .titleAndButton .moreBtn {
+  height: 100%;
+}
+.info .metadata .titleAndButton .moreBtn.clicked {
+  transform: rotate(180deg);
+}
+
+.infoAndUpNext .info .views {
+  font-size: var(--font-small);
+  color: var(--grey-dark-color);
+}
+/* info -action button */
+.infoAndUpNext .actions {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: var(--spacing);
+  margin-bottom: var(--spacing);
+}
+.infoAndUpNext .actions li {
+}
+.infoAndUpNext .actions li button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: var(--font-small);
+  color: var(--grey-dark-color);
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.infoAndUpNext .actions li button i {
+}
+.infoAndUpNext .actions li button span {
+}
+/* info -channel */
+.infoAndUpNext .channel {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--grey-dark-color);
+  border-bottom: 1px solid var(--grey-dark-color);
+}
+.infoAndUpNext .channel .metadata {
+  display: flex;
+  flex-direction: low;
+  align-items: center;
+  padding-top: var(--spacing-small);
+  padding-bottom: var(--spacing-small);
+}
+.infoAndUpNext .channel .metadata img {
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  border-radius: 50%;
+  margin-right: var(--spacing);
+}
+.infoAndUpNext .channel .metadata .info {
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing);
+}
+.infoAndUpNext .channel .metadata .info .name {
+  font-size: var(--font-regular);
+}
+.infoAndUpNext .channel .metadata .info .subscribers {
+  font-size: var(--font-small);
+  color: var(--grey-dark-color);
+}
+.infoAndUpNext .channel .subscribe {
+  color: var(--red-color);
+  font-size: var(--font-medium);
+  background-color: var(--grey-light-color);
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+/* Up next */
+.infoAndUpNext .upNext {
+  padding: 0 var(--spacing);
+}
+.infoAndUpNext .upNext .title {
+  color: var(--grey-dark-color);
+  font-size: var(--font-medium);
+}
+.infoAndUpNext .upNext ul {
+}
+.infoAndUpNext .upNext .item {
+  display: flex;
+  margin: var(--spacing) 0px 0px;
+  font-size: var(--font-regular);
+}
+.infoAndUpNext .upNext .item .img {
+  flex-basis: 35%;
+  margin-right: var(--spacing);
+}
+.infoAndUpNext .upNext .item .img img {
+  width: 100%;
+}
+.infoAndUpNext .upNext .item .itemInfo {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 60%;
+}
+.infoAndUpNext .upNext .item .itemInfo .title {
+  color: var(--black-color);
+  font-size: var(--font-small);
+}
+.infoAndUpNext .upNext .item .itemInfo .name {
+  color: var(--grey-dark-color);
+  font-size: var(--font-micro);
+}
+.infoAndUpNext .upNext .item .itemInfo .views {
+  color: var(--grey-dark-color);
+  font-size: var(--font-micro);
+}
+.infoAndUpNext .upNext .item .moreBtn {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-basis: 5%;
+  height: 100%;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+.infoAndUpNext .upNext .item .moreBtn i {
+}
+
+/* ***************** 미디어쿼리 ****************** */
+@media (min-width: 768px) {
+  .infoAndUpNext {
+    flex-direction: row;
+  }
+  .infoAndUpNext .upNext {
+    padding: var(--spacing);
+  }
+}
